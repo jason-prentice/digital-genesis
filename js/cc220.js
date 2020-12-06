@@ -44,8 +44,8 @@ if (CETEI) {
 			var html = $(selector).find('[hidden]').html();
 			if(html){
 				html = html.replace(/"/g, "&quot;");
-				html = html.replace(/.+Comment:/g, "<hr />Comment:");
-				html = html.replace(/.+Alt\. Trans\.:/g, "<hr />Alt. Trans.:");
+				html = html.replace(/[.\s]+Comment:/g, "<hr />Comment:");
+				html = html.replace(/[.\s]+Alt\. Trans\.:/g, "<hr />Alt. Trans.:");
 				return '<a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + html + '" />' ;
 			}
 			return false;
