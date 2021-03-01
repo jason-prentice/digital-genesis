@@ -1,3 +1,4 @@
+
 var getBeginningWords = function(text, count){
 	return text.split(/\s+/).slice(0,count).join(" ");
 };
@@ -14,7 +15,7 @@ var prepareNotePopovers = function(selector){
 	});
 };
 
-var setView = function(){
+var setView = function(){	
 	teiPanel.setMainView();
 	teiPanel.setVisibility();
 	parallelPanel.setMainView();
@@ -23,20 +24,45 @@ var setView = function(){
 	documentarySources.setVisibility();
 	outlinePanel.setVisibility();
 	tools.setVisibility();
+
 }
 
 $(document).ready(function(){
+	$("#page").hide();
 	setView();
 });
+
+function showPage(page){
+	var html = "includes/" + page + ".html";
+	$("#page").load(html);
+	$("#page").show();
+	$("#text").hide();
+}
+
+$(document).on("click", ".nav-item", function() {
+	$('.nav-item').removeClass('active');
+	$(this).addClass('active');
+	var section = $(this).attr('data-section');
+	if (["about","bibliography", "introduction"].indexOf(section) >= 0){
+			showPage(section);
+		} else {
+			$("#page").hide();
+			$("#text").show();
+			
+		}
+	
+});
+
 
 /*** CETEIcean ***/
 
 /*Convert a TEI document to HTML and insert into #TEI.*/
+
 var CETEI;
 if (CETEI) {
 	var CETEIcean = new CETEI()
 	//CETEIcean.getHTML5("https://raw.githubusercontent.com/bulib/dcgenesis/master/tei/gen1-15_master.xml", function(data) {
-	CETEIcean.getHTML5("tei/gen-noah-flood-chiasm_master_11-27-20.xml", function(data) {
+	CETEIcean.getHTML5("tei/gen-noah-flood-chiasm_main.xml", function(data) {
 		document.getElementById("TEI").appendChild(data);		
 		$('tei-anchor').wrap(function(){
 			var ID = $(this).attr('id');
@@ -60,7 +86,8 @@ if (CETEI) {
 		$("tei-anchor").html("<sup><i class='far fa-comment-alt light'></i><sup>");
 		prepareNotePopovers(teiPanel.selector);
 	});	
-}	
+}
+
 
 /*** MAIN VIEW MODE ***/
 var mainViewMode = {
@@ -192,7 +219,6 @@ var teiPanel = {
 	}
 }
 
-
 /*** TEI PARALLEL ***/
 
 var teiParallel = {
@@ -264,8 +290,7 @@ var outlinePanel = {
 				var text = $(this).text();
 				text = getBeginningWords(text, 8);
 				html += "<p class='outline-link outline-level-"+outlineLevel+"' data-parallel='#"+id+"'><b>"+$(this).attr("display")+":</b> "+text+"...</p>";			
-			}
-			
+			}			
 		});
 		
 		$(this.htmlSectionSelector).html(html);
@@ -299,7 +324,6 @@ var parallelPanel = {
 	getVisibility: function() {
 		var selectedView = mainViewMode.getSelectedView();
 		if(this.compatibleViews.includes(selectedView)){
-			//return viewOptions.checkOptionSelected(this.viewOption);
 			if($(this.toggleSelector).is(':checked')){
 				return true;
 			} else {
@@ -397,23 +421,6 @@ $(document).on("click", tools.closeSelector, function() {
 
 
 
-
-$(document).on("click", ".nav-item", function() {
-	$('.nav-item').removeClass('active');
-	$(this).addClass('active');
-	var section = $(this).attr('data-section');
-	
-	if (["about","bibliography"].indexOf(section) >= 0){
-		var html = "includes/"+section+".html"
-		$("#page").load(html);
-		$("#page").show();
-		$("#text").hide();
-	} else {
-		$("#page").hide();
-		$("#text").show();
-	}
-});
-
 $( document ).on("click",".accordion", function() {	
     var panel = $(this).next();
     var arrow = $(this).find('.arrow');
@@ -428,89 +435,3 @@ $( document ).on("click",".accordion", function() {
       	arrow.addClass('fa-chevron-down');
     } 
 });
-
-/*$( document ).on( "click", ".interp", function() {
-	var targetID = $(this).attr('id');
-	$('#target').attr('data-target',targetID);
-	$("#formatter").dialog( "option", "position", { my: "left top", at: "left bottom", of: $(this), collision: "fit" } );
-	$("#formatter").dialog('open');
-});*/
-	
-/*$( document).on( "click", ".formatter", function() {
-	var newStyle= $(this).attr('id');
-	var target = $('#target').attr('data-target');
-	var targetID = "#"+target;
-      
-	if (newStyle === "none"){
-		var currentStyle = $(targetID).attr('data-style');
-		clearFormatting(currentStyle);
-	} else {
-		var selector = '[ana="'+targetID+'"]';
-		$(targetID).attr('data-style', newStyle);
-		$(selector).attr('data-style', newStyle);
-	}
-	var panel = $(targetID).parent();
-		var height = panel.prop('scrollHeight')+ "px"
-		panel.css('max-height',height);
-	$( "#formatter" ).dialog( "close" );
-	updateBadges();
-});*/
-	 
-/*$( document).on( "change", ".menu-item", function() {
-	var section= $(this).attr('data-for');
-	var selector= '#'+section;
-	if($(this).is(':checked')) {
-		$(selector).show();
-	} else {
-		$(selector).hide();
-	}
-});*/
-
-/*$(document).on("click", ".help", function() {
-	$(this).parent().parent().next().show();
-})*/
-
-/*$(document).on("click", ".ok", function() {
-	$(this).parent().hide();
-})*/
-
-/*$(document).on("click", "#clear-formatting", function() {
-	clearFormatting();
-	updateBadges();
-})*/
-
-/*function updateBadges(){
-	$('.accordion').each(function(){
-		var selectionCount = $(this).next().find('p[data-style]').length;
-		$(this).find('.badge').text(selectionCount);
-	});
-}*/
-
-/*function clearFormatting(dataStyle) {
-	if(dataStyle){
-		var selector = "[data-style='"+dataStyle+"']";
-		$(selector).removeAttr('data-style');
-	} else {
-		$('[data-style]').removeAttr('data-style');
-	}
-}*/
-
-/*function displayAnalyzeSelection(selection){
-	var html = "includes/analyze-"+selection+".html";
-	$("#prompt").load(html);
-	$("#prompts").scrollTop(0);
-}
-
-$( function() {
-  $( "#formatter" ).dialog({
-		autoOpen: false,
-		modal: true,
-		buttons: [{
-			id: "Cancel",
-			text: "Cancel",
-			click: function () {
-				$(this).dialog('close');
-			}
-		}]
-	});
-});*/

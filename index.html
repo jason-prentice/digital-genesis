@@ -20,9 +20,10 @@
 <div id="navbar">
   <span id="nav-brand"><a href="">The Book of Genesis <span class="light small">Digital Edition Fall 2020</span></a></span> 
   <div id="nav-items">
+    <span class="nav-item" data-section="introduction">Introduction</span>
     <span class="nav-item active" data-section="text">Text</span>
-    <span class="nav-item" data-section="about">About</span>
     <span class="nav-item" data-section="bibliography">Bibliography</span>
+    <span class="nav-item" data-section="about">About</span>
   </div>
 </div>
 
@@ -32,8 +33,6 @@
     <div id="text-header">
      
         <div id="text-menu">
-          <input type="radio" name="view" id="intro-view" value="intro-view" class="menu-item offscreen"/>
-          <label aria-label="Introduction" for="intro-view"><i class="fas fa-chalkboard-teacher light small" aria-hidden="true"></i><span class="menu-text small"> Introduction</span></label>
           <input type="radio" name="view" id="chapter-view" value="chapter-view" class="menu-item offscreen"/>
           <label aria-label="Chapter text" for="chapter-view"><i class="fas fa-book-open light small" aria-hidden="true"></i><span class="menu-text small"> Chapter text</span></label>
           <input type="radio" name="view" id="chiastic-view" value="chiastic-view" class="menu-item offscreen"/>
@@ -59,85 +58,20 @@
          <span><i id="close-tools" class="fa fa-chevron-left close light" data-for="interp" aria-hidden="true"></i><span class="sr-only">Close the panel</span></span> <span>Tools</span>
         </div>
 
-        <div class="accordion">
-          <span>Sources</span>
-          <div>
-          
-            <span><i class="fas fa-chevron-down arrow light" aria-hidden="true"></i><span class="sr-only">Expand or collapse section</span></span>
-          </div>
-        </div>
+    
 
-        <div class="interp-group">
           <p class="small">
           <input type="checkbox" id="sources-toggle" data-for="sources" class="menu-item"/>
           <label for="sources-toggle" aria-label="Show documentary sources">Show documentary sources</label>
          </p>
-          <div id="sourcesHtml"></div>
-      </div>
-        
-        
-        <!--<div class="accordion">
-          <span>Outline</span>
-          <div>
-          
-            <span><i class="fas fa-chevron-down arrow light" aria-hidden="true"></i><span class="sr-only">Expand or collapse section</span></span>
+          <div id="sourcesHtml">
+            <p class="yahwist">blue: Yahwist</p>
+            <p class="priestly">salmon: Priestly</p>
           </div>
-        </div>
-
-        <div class="interp-group">
-          <div id="outlineHtml"></div>
-      </div>-->
+     
         
-     <!-- <div class="accordion"><span>Sources</span>
-        <div>
-          <span class="badge">0</span>
-          <span><i class="fas fa-chevron-down arrow light" aria-hidden="true"></i><span class="sr-only">Expand or collapse section</span></span>
-        </div>
-      </div>
-        <div class="interp-group">
-          <input type="checkbox" id="sources-toggle" data-for="sources" class="menu-item"/>
-          <label for="sources-toggle" aria-label="Show documentary sources">Show documentary sources</label>
-        </div>
-        
-      <div class="accordion">
-        <span>Parallel View</span>
-        <div>
-          <span class="badge">0</span>
-          <span><i class="fas fa-chevron-down arrow light" aria-hidden="true"></i><span class="sr-only">Expand or collapse section</span></span>
-        </div>
-      </div>
-        <div class="interp-group">
-          <input type="checkbox" id="parallel-toggle" data-for="parallel" class="menu-item"/>
-          <label for="parallel-toggle" aria-label="Open or close Parallel panel">Show parallels in panel</label>
-        </div>-->
       
-        <div class="accordion">
-          <span>Themes</span>
-          <div>
-            
-            <span><i class="fas fa-chevron-down arrow light" aria-hidden="true"></i><span class="sr-only">Expand or collapse section</span></span>
-          </div>
         </div>
-          <div class="interp-group">
-            <div id="clear-formatting" class="light">Clear all formatting</div>
-            <div id="themesHtml"></div>
-             
-          </div>
-        </div>
-
-
-
-       <!-- <div id="options" class="panel panel-sm">
-          <div class="header">  
-          </div>
-          <input type="radio" name="option" id="sources" value="sources" class="offscreen"/>
-          <label aria-label="Sources" for="sources"><p>Sources</p></label>
-          <input type="radio" name="option" id="parallels" value="parallels" class="offscreen"/>
-          <label aria-label="Parallels" for="parallels"><p>Parallels</p></label>
-          <div id="optionsHtml">  
-          </div>
-        </div>-->
-      <!--<div id="TEI-wrapper" class="chapter-view">-->
         
         <div id="TEI" class="panel panel-lg chapter-view">
 

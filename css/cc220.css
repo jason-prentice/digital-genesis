@@ -106,7 +106,7 @@ hr {
 
 /*Page*/
 #page {
-  display: none;
+  
   padding: 20px;
   line-height: 1.5em;
   height: calc(100% - 40px);
@@ -116,7 +116,7 @@ hr {
 
 /*Text Header*/
 #text-header {
-  padding: 20px 10px 0 10px;
+  padding: 20px 15px 0 10px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -416,7 +416,7 @@ tei-div.active, #outlineHtml p.active {
   display: block;
   font-family: Arvo, sans-serif;
   font-weight: normal;
-  font-size: 180%;
+  font-size: 150%;
   margin-top: .5rem;
 }
 
@@ -424,7 +424,7 @@ tei-div.active, #outlineHtml p.active {
   display: block;
   font-family: Arvo, sans-serif;
   font-weight: normal;
-  font-size: 180%;
+  font-size: 150%;
   margin-top: .5rem;
   content: attr(display); 
 }
@@ -709,11 +709,15 @@ tei-div.active, #outlineHtml p.active {
 }
 
 /*Documentary Sources*/
-.show-yahwist {
+.show-yahwist, .yahwist {
   color: #00758F;
 }
-.show-priestly {
+.show-priestly, .priestly {
   color: #E15D44;
+}
+
+.yahwist, .priestly {
+  font-size: small;
 }
 
 /*Bibliography*/
