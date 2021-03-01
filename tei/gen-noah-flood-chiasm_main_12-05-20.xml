@@ -14,42 +14,43 @@
         </fileDesc>
     </teiHeader>
     <text type="book">
-        <body>
-            <head>The Flood</head>
-            <div type="chiasm">
-                <div type="parallel" xml:id="A" corresp="#Apr">
-                    <label type="chtitle" xml:id="ch6">Chapter 6</label>
-                    <ab>
-                    <seg ana="#yahwist">
-                            <seg type="verse" xml:id="ch06v1">1
-                            </seg> 
-                            And it came to pass, when men
-                            <anchor xml:id="a001" /> 
-                            began to multiply on the face of the earth, and daughters were born unto them, 
-                            <seg type="verse" xml:id="ch06v2">2
-                            </seg> 
-                            that the sons of God
-                            <anchor xml:id="a002" /> 
-                            saw the daughters of men that they were fair;
-                            <anchor xml:id="a003" /> and they took them wives, whomsoever they chose. 
-                            <seg type="verse" xml:id="ch06v3">3
-                            </seg>
-                            And the LORD said: ‘My spirit shall not abide in man
-                            <anchor xml:id="a004" /> 
-                            for ever, for that he also is flesh; therefore shall his days be a hundred and twenty years.’
-                            <anchor xml:id="a005" />
-                            <seg type="verse" xml:id="ch06v4">4
-                            </seg> 
-                            The Nephilim
-                            <anchor xml:id="a006" /> 
-                            were in the earth in those days, and also after that, when the sons of God came in unto the daughters of men, and they bore children to them; the same were the mighty men
-                            <anchor xml:id="a007" /> 
-                            that were of old, the men of renown
-                        </seg>
-                        <anchor xml:id="a008" />
-                    </ab>
-                </div>
-          
+<body>
+    <head><!-- Jason: we ought to agree on a title for the following text (Chapters 6-9). --></head>
+    <div type="chiasm">
+        <div type="parallel" xml:id="A" corresp="#Apr">
+            <label type="chtitle" xml:id="ch6">
+                Chapter 6
+            </label>
+            <ab>
+                <seg ana="#yahwist">
+                    <seg type="verse" xml:id="ch06v1">1
+                    </seg> 
+                    And it came to pass, when men
+                    <anchor xml:id="a001" /> 
+                    began to multiply on the face of the earth, and daughters were born unto them, 
+                    <seg type="verse" xml:id="ch06v2">2
+                    </seg> 
+                    that the sons of God
+                    <anchor xml:id="a002" /> 
+                    saw the daughters of men that they were fair;
+                    <anchor xml:id="a003" /> and they took them wives, whomsoever they chose. 
+                    <seg type="verse" xml:id="ch06v3">3
+                    </seg>
+                    And the LORD said: ‘My spirit shall not abide in man
+                    <anchor xml:id="a004" /> 
+                    for ever, for that he also is flesh; therefore shall his days be a hundred and twenty years.’
+                    <anchor xml:id="a005" />
+                    <seg type="verse" xml:id="ch06v4">4
+                    </seg> 
+                    The Nephilim
+                    <anchor xml:id="a006" /> 
+                    were in the earth in those days, and also after that, when the sons of God came in unto the daughters of men, and they bore children to them; the same were the mighty men
+                    <anchor xml:id="a007" /> 
+                    that were of old, the men of renown
+                </seg>
+                <anchor xml:id="a008" />
+            </ab>
+        </div>
         <div type="parallel" xml:id="B" corresp="#Bpr">
             <ab>
                 <seg ana="#yahwist">
@@ -678,7 +679,7 @@ Alt. Trans.: "humankind" (Alter 38)</note>
         
         Comment: "God's speech is difficult to translate, much less to understand." (Kass 160)
         
-        Comment: The verb is "appears nowhere else in the Hebrew Bible, and its meaning is not known. Dictionaries tend to say things like 'context suggests "remain,"' and it does, but I would rather leave a gap." (Good 67)</note>
+        Comment: The verb is "a verb that appears nowhere else in the Hebrew Bible, and its meaning is not known. Dictionaries tend to say things like 'context suggests "remain,"' and it does, but I would rather leave a gap." (Good 67)</note>
     <note target="#a005"><!-- Comment by Esteban. --></note>
     <note target="#a006">Heb. root: naphal = "to fall" or "to cause to fall" (Kass 161)
         
@@ -781,9 +782,8 @@ Comment: "This is the first instance of a common convention of biblical narrativ
     <note target="#a046">Heb.: = "began" or "being profane" (Kass 203)</note>
     <note target="#a047">Comment: "In the ancient East Mediterranean world wine was something more than a beverage gladdening the heart. For the Greeks wine, fire, and phallus formed a triad denoting sexuality. [...] The biblical Song of Songs reveals this same interrelation of wine, fire, and sex. [...] Wine gave power to lovers, heightening their desire and enhancing their vigor for lovemaking. [...] The special powers ascribed to wine and other intoxicants require a drastic revision in popular opinion of Noah: in all likelihood his intoxication did not stem from any deficiency of character but from his wholehearted attempt to execute the command he received from God [to repopulate the earth] upon disembarking from the ark." (Cohen 3-7)</note>
     <note target="#a048">Comment: "In fact, 'his tent' is a questionable translation; the noun has an ending that suggests 'her tent.' Hence rabbinic scholars have interpreted the passage as referring to the tent of Noah's wife." (Kikawada and Quinn 102)</note>
-    <note target="#a049">Comment: This curse mirrors the one in Chapter 6, when God condemns all flesh because it is wicked.
-        Comment: "No one has ever figured out exactly what it is that Ham does to Noah. Some, as early as the classical Midrash, have glimpsed here a Zeus-Chronos story in which the son castrates the father or, alternately, penetrates him sexually. The latter possibility is reinforced by the fact that 'to see the nakednes of' frequently means 'to copulate with.'" (Alter 52-53)
-        Comment: "Ham perhaps sees his father and mother in an act of intercourse, or at least attempted intercourse. [. . .] One answer suggests itself. Ham commits incest with his mother after his father is rendered incapacitated by drink (and after Noah arouses the mother but proves incapable of satisfying her). Ham supplants his father, much as the sons of God before supplanted other potential human fathers." (Kikawada and Quinn 102-3)
+    <note target="#a049">Comment: "No one has ever figured out exactly what it is that Ham does to Noah. Some, as early as the classical Midrash, have glimpsed here a Zeus-Chronos story in which the son castrates the father or, alternately, penetrates him sexually. The latter possibility is reinforced by the fact that 'to see the nakednes of' frequently means 'to copulate with.'" (Alter 52-53)
+        Comment: "Ham perhaps sees his father and mother in an act of intercourse, or at least attempted intercourse. [. . .] One answer suggests itself. Ham commits incest with his mother after his father is rendered incapacitated by drink (and after Noah arouses the mother but proves incapable of satisfying her). Ham supplants his father, much as the sons of God before supplanted other potential human fathers. " (Kikawada and Quinn 102-3)
         Comment: "The origins of the whole must be stated in some form, but they must also be forgotten. From the Biblical point of view they may not be hearkened back to either as a paradigm or as a way of understanding. The temporal beginnings must be superseded by the Covenant. [. . .] When Ham looked upon his father's nakedness he implicitly rejected the New Way insofar as that Way was essentially new. Either by design or by accident he gazed upon those origins which lie in back of the Covenant." (Sacks 98)</note>
 </div>
 <div type="editorial">
