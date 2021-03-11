@@ -80,7 +80,6 @@ if (CETEI) {
 			var newId = $(this).attr("xml\:id").replace("pr","'");
 			$(this).attr("display", newId);
 		});
-		outlinePanel.setHtml();
 		themes.setHtml();
 		$("tei-seg[type='verse']").wrap("<sup />");
 		$("tei-anchor").html("<sup><i class='far fa-comment-alt light'></i><sup>");
@@ -266,34 +265,6 @@ var outlinePanel = {
 	},
 	clearHighlighting: function(){
 		$(this.outlineLinkSelector).removeClass("active");
-	},
-	
-	setHtml: function(){
-		var html = "";
-		var outlineLevel = 0;
-		var regex = /\d+/;
-		var countPrimes = 0;
-		$(teiParallel.selector).each(function(){
-			var id = $(this).attr("id");
-			
-			if(!regex.test(id)) {
-				if (id.includes("pr")){
-					countPrimes = countPrimes + 1;
-					if(countPrimes != 1){
-						outlineLevel = outlineLevel - 1;
-					}
-				} else {
-					outlineLevel = outlineLevel + 1;
-				}
-			
-				outlineLevel = outlineLevel >= 1? outlineLevel : 1;
-				var text = $(this).text();
-				text = getBeginningWords(text, 8);
-				html += "<p class='outline-link outline-level-"+outlineLevel+"' data-parallel='#"+id+"'><b>"+$(this).attr("display")+":</b> "+text+"...</p>";			
-			}			
-		});
-		
-		$(this.htmlSectionSelector).html(html);
 	}
 }
 
